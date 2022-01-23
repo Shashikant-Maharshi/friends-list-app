@@ -29,26 +29,24 @@ const App = () => {
     <div className="app">
       <AppHeader className="app--header" />
       <div className='app--content'>
-        <div className='sticky'>
-          <TextInput
-            value={text.value}
-            placeholder='Enter your friends name'
-            onSubmit={() => onAction(ACTION_TYPES.CREATE_NEW)}
-            onChange={(val) => onAction(ACTION_TYPES.UPDATE_INPUT_TEXT, val)}
-            onClear={() => onAction(ACTION_TYPES.UPDATE_INPUT_TEXT, '')}
-            hint={inputHint}
-            maxLength={50}
+        <TextInput
+          value={text.value}
+          placeholder='Enter your friends name'
+          onSubmit={() => onAction(ACTION_TYPES.CREATE_NEW)}
+          onChange={(val) => onAction(ACTION_TYPES.UPDATE_INPUT_TEXT, val)}
+          onClear={() => onAction(ACTION_TYPES.UPDATE_INPUT_TEXT, '')}
+          hint={inputHint}
+          maxLength={50}
+        />
+        {!!(visibleFriends.length > 1) && (
+          <SortableMenu
+            options={SORT_OPTIONS}
+            onSelect={(event) => onAction(ACTION_TYPES.CHANGE_SORT, event.target.value)}
+            onSort={() => onAction(ACTION_TYPES.CHANGE_SORT_DIRECTION)}
+            selected={sortBy}
+            sortDirection={sortDirection}
           />
-          {!!(visibleFriends.length > 1) && (
-            <SortableMenu
-              options={SORT_OPTIONS}
-              onSelect={(event) => onAction(ACTION_TYPES.CHANGE_SORT, event.target.value)}
-              onSort={() => onAction(ACTION_TYPES.CHANGE_SORT_DIRECTION)}
-              selected={sortBy}
-              sortDirection={sortDirection}
-            />
-          )}
-        </div>
+        )}
         <List
           items={
             visibleFriends.length > DATA_LIMIT && paginationSlice
