@@ -1,0 +1,8 @@
+@import '../../_variables.scss';
+
+.confirm-box {
+  &--title {
+    color: $warning;
+    margin: 0;
+  }
+}

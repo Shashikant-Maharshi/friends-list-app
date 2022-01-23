@@ -1,0 +1,22 @@
+@import '../../_variables.scss';
+
+.sortable-menu {
+  justify-content: end;
+  padding: 0.5em 0;
+
+  label {
+    color: $grey;
+    font-size: 14px;
+    line-height: 30px;
+    margin-right: 0.5em;
+  }
+
+  select {
+    border: none;
+    color: $navy-blue;
+    background-color: $white;
+    border: 1px solid $navy-blue;
+    border-radius: $radius;
+    font-weight: bold;
+  }
+}

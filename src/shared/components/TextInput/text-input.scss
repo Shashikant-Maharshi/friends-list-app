@@ -1,0 +1,35 @@
+@import '../../_variables.scss';
+
+input {
+  height: 2.5rem;
+  padding: 0.25em 0.5em;
+  border: none;
+  background-color: $baby-blue;
+  border-radius: $radius-small;
+  text-overflow: ellipsis;
+  width: 100%;
+
+  &:focus {
+    border-bottom: 3px solid $blue-green;
+  }
+}
+
+.clear-button {
+  border: none;
+  padding: 0.25em 0.5em;
+  position: absolute;
+  right: 20px;
+}
+
+.input-hint {
+  margin: 0.5em 0;
+  font-size: 0.75em;
+
+  &.is-error {
+    color: $danger;
+  }
+
+  &.is-info {
+    color: grey;
+  }
+}

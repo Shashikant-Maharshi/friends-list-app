@@ -1,0 +1,32 @@
+@import '../../_variables.scss';
+
+button {
+  background-color: inherit;
+  border: none;
+  color: $navy-blue;
+  cursor: pointer;
+  margin: 0.25em;
+  padding: 0.25em 0.5em;
+  font-weight: bold;
+  text-align: center;
+  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s; /* Safari */
+  
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $navy-blue;
+    color: $baby-blue;
+  }
+  
+  &[data-has-boarder=true] {
+    border: 1px solid $navy-blue;
+    border-radius: $radius-small;
+  }
+
+  &:not(:enabled) {
+    background-color: inherit;
+    color: $grey;
+    cursor: not-allowed;
+  }
+}
