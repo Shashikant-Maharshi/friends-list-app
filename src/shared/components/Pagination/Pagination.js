@@ -55,7 +55,7 @@ const Pagination = ({data, dataLimit, pageLimit, onAction}) => {
           disabled={currentPage === 1}
         />
 
-        {getPaginationGroup().map((item, index) => (
+      {getPaginationGroup().map((item, index) => (
           <Button
             key={index}
             onClick={() => changePage(item)}
