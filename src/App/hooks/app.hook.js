@@ -14,7 +14,7 @@ const defaultText = {
 
 const useApp = () => {
   const [text, setText] = useState(defaultText);
-  const [friends, setFriends] = useState([]);
+  const [friends, setFriends] = useState({});
   const [deleteResource, setDeleteResource] = useState(null);
   const [paginationSlice, setPaginationSlice] = useState(null);
   const [sortBy, setSortBy] = useState(SORT_OPTIONS_MAP[SORT_OPTION_TYPES.NAME].id);

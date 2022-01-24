@@ -11,9 +11,11 @@ const Button = ({
 }) => (
   <button
     className={className}
-    type="button"
-    onClick={onClick}
     data-has-boarder={hasBorder}
+    name={label}
+    aria-label={label}
+    onClick={onClick}
+    type="button"
     {...props}
   >
     {icon}
