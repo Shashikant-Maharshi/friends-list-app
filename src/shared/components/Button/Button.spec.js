@@ -10,7 +10,7 @@ import {
 import Icons from '../Icons/Icons'
 import Button from './Button';
 
-describe('Component: FriendCard', () => {
+describe('Component: Button', () => {
   const onClick = jest.fn();
   
   const renderComponent = (props) => render(
